@@ -1,0 +1,63 @@
+.grid-item-sede {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 1rem; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px; /* Ajustar altura */
+    width: 400px; /* Hacer las tarjetas más anchas */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación */
+    padding: 10px; /* Espaciado interno */
+}
+.grid-item-sede:hover {
+    transform: translateY(-5px); /* Efecto hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+.sede-name {
+    font-size: 28px; /* Aumentar tamaño de fuente */
+    font-weight: bold; /* Hacer el texto más destacado */
+    color: #333333; /* Color oscuro para contraste */
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Espaciado superior */
+    margin-bottom: 40px; /* Espaciado inferior */
+}
+
+.sede-title {
+    text-align: center;
+    font-size: 20px; /* Ajustar tamaño para armonizar */
+    color: #333333; /* Color oscuro */
+}
+
+/* Iconos dentro de las tarjetas */
+.icon-container {
+    font-size: 50px; /* Tamaño del icono */
+    color: #007bff; /* Color azul llamativo */
+    margin-bottom: 10px; /* Espaciado entre el icono y el título */
+}
+
+.role-description {
+    text-align: center;
+    font-size: 14px; /* Tamaño pequeño para descripción */
+    color: #666666; /* Color suave */
+    margin-top: 5px; /* Espaciado entre título y descripción */
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .grid-item-sede {
+        width: 200px; /* Ajustar tamaño en pantallas pequeñas */
+        height: 130px;
+    }
+
+    .sede-name {
+        font-size: 18px;
+    }
+
+    .icon-container {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,100 @@
+.segimiento-item{
+    margin-bottom: 20px;
+}
+
+.h2 {
+  font-size: 24px;
+  color: #009ee2;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.h1{
+  font-size: 1.8rem;
+  color: #0090bc;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.crear-turno-content{
+   padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.crear-turno-form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.form-group{
+  margin-bottom: 20px;
+  width: 100%;
+  gap: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.crear-turno-form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+  input[type="text"],
+  input[type="file"]{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .history-card{
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+    position: relative;
+}
+
+.history-day{
+  margin-bottom: 50px;
+}
+
+.search-input-seguimiento {
+  padding: 20px;
+  width: 38% !important;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+  position: relative;
+  left: 60%;
+  align-content: center;
+}
+
+/* Cambios al enfocar el input */
+.search-input-seguimiento:focus {
+border-color: #007bff;
+outline: none;
+}
+
+/* Cambia el placeholder cuando está enfocado */
+.search-input-seguimiento:focus::placeholder {
+color: #007bff;
+font-weight: 600;
+transition: color 0.3s ease-in-out;
+}
+
+.h4 {
+  font-size: 24px;
+  color: #009ee2;
+  font-weight: 600;
+  margin-bottom: 20px;
+}

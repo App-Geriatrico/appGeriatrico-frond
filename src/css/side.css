@@ -1,0 +1,247 @@
+/* Contenedor principal */
+.main-container {
+  display: flex; /* Usar flexbox para alinear el Sidebar y el contenido */
+  flex-direction: row; /* Alinear los elementos en fila */
+  min-height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+  overflow: hidden;
+}
+
+.logo-fundacion{
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+
+/* Estilos del Sidebar */
+#sidebar {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  width: 200px;
+  padding: 5px 1rem;
+  background-color: var(--base-clr);
+  border-right: 1px solid var(--line-clr);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  z-index: 1000; 
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;;
+  transition:  .5s ease; /* Transición suave */
+}
+
+#sidebar:not(.close) ul li span {
+  display: inline; /* Mostrar nombres cuando el sidebar está abierto */
+  position: static;
+  opacity: 1;
+}
+
+
+#sidebar ul li span {
+  display: none; /* Ocultar nombres por defecto */
+  position: absolute;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#sidebar:not(.close) ul li:hover span {
+  display: inline-block;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Estilos cuando el sidebar está cerrado */
+#sidebar.close a span {
+  display: none; /* Ocultar los nombres */
+}
+
+
+
+
+
+/* Estilos del contenido */
+.content {
+  flex-grow: 1; /* El contenido principal ocupa el resto del espacio */
+  padding: 20px; /* Espacio alrededor del contenido */
+  z-index: 1;
+}
+
+/* Otros estilos del Sidebar (sin cambios significativos) */
+#sidebar.close {
+  padding: 3.8px;
+  width: 60px;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar > ul > li:first-child {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+#sidebar > ul > li:first-child .logo {
+  font-weight: 600;
+}
+
+#sidebar ul li:hover span {
+  color: var(--accent-clr);
+}
+
+
+
+#sidebar a,
+#sidebar .dropdown-btn,
+#sidebar .logo-fundacion {
+  border-radius: 0.5em;
+  padding: 0.85em;
+  text-decoration: none;
+  color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  gap: 0em;
+  margin-left: 8px;
+  font-size: 17px;
+
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+#sidebar  {
+  flex-shrink: 0;
+  fill: var(--text-clr);
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+  flex-grow: 1;
+  color: #3d3d3d;
+  font-size: 15px;
+}
+
+#sidebar a:hover ,
+#sidebar .dropdown-btn:hover {
+  background-color:#0090bc20;
+  transition: .3s;
+}
+
+#sidebar a:hover .icon,
+#sidebar .dropdown-btn .icon:hover {
+  color: #0090bc; /* Usa tu variable de color de acento */
+}
+#sidebar .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+
+}
+
+#sidebar .sub-menu > div {
+  overflow: hidden;
+}
+
+#sidebar .sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+.dropdown-btn  .icon{
+  transition: 200ms ease;
+}
+
+.rotate .icon:last-child {
+  rotate: 180deg;
+}
+
+#sidebar .sub-menu a {
+  padding-left: 2em;
+}
+
+#toggle-btn {
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background: none;
+  cursor: pointer;
+}
+
+/* Media query para diseño responsivo (sin cambios significativos) */
+@media (max-width: 768px) {
+  #sidebar {
+    height: 60px;
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid var(--line-clr);
+    padding: 0;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+
+    > ul {
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      align-items: center;
+      overflow-x: scroll;
+    }
+    ul li {
+      height: 100%;
+    }
+    ul a,
+    ul .dropdown-btn {
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border-radius: 0;
+      justify-content: center;
+    }
+
+    ul li span,
+    ul li:first-child,
+    .dropdown-btn svg:last-child {
+      display: none;
+    }
+
+    ul li .sub-menu.show {
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+      box-sizing: border-box;
+      height: 60px;
+      width: 100%;
+      background-color: var(--hover-clr);
+      border-top: 1px solid var(--line-clr);
+      display: flex;
+      justify-content: center;
+
+      > div {
+        overflow-x: auto;
+      }
+      li {
+        display: inline-flex;
+      }
+      a {
+        box-sizing: border-box;
+        padding: 1em;
+        width: auto;
+        justify-content: center;
+      }
+    }
+  }
+} 
