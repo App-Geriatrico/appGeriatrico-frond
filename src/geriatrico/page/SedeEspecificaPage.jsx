@@ -38,13 +38,19 @@ export const SedeEspecificaPage = () => {
                 }
             } catch (err) {
                 setError("Error al obtener los datos.");
-            } finally {
+            } finally { 
                 setLoading(false);
             }
         };
 
         fetchSede();
     }, []);
+
+    useEffect(() => {
+        if (sede) {
+            localStorage.setItem("sedeData", JSON.stringify({ sede, geriatrico }));
+        }
+    }, [sede, geriatrico]);
 
 
     if (loading) {
