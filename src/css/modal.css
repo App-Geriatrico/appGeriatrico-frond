@@ -305,3 +305,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
   
+
+@media screen and (max-width: 768px) {
+  .modal-content{
+    width: 90% !important;
+    max-width: 900px; /* Ajusta el ancho máximo */
+    max-height: 80vh; /* No ocupar más del 80% de la altura de la pantalla */
+    overflow-y: auto; /* Habilita el scroll si hay mucho contenido */
+    text-align: left;
+  }
+  
+}

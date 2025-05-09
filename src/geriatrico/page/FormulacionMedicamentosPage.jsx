@@ -176,14 +176,14 @@ export const FormulacionMedicamentosPage = () => {
                 <td>
                     {formulacion.admin_estado === "En Curso" && (
                         <div className='buttons-asignar'>
-                            <button className='suspender' onClick={() => handleSuspenderClick(formulacion)}><FaStop /></button>
-                            <button className='expandir' onClick={() => handleExpandirClick(formulacion)}><FaCalendarAlt /></button>
+                            <button className='suspender' title='Suspender' onClick={() => handleSuspenderClick(formulacion)}><FaStop /></button>
+                            <button className='expandir' title='Expandir' onClick={() => handleExpandirClick(formulacion)}><FaCalendarAlt /></button>
                         </div>
                     )}
                     {formulacion.admin_estado === "Pendiente" && (
                         <div className='buttons-asignar'>
-                            <button className='turnos' onClick={() => { setIsModalUpdate(true); setSelectedForm(formulacion); }}><FaEdit /></button>
-                            <button className='inactive' onClick={() => handleDeleteFormulacion(formulacion.admin_id)}><FaTrash /></button>
+                            <button className='turnos' title='Agregar dosis' onClick={() => { setIsModalUpdate(true); setSelectedForm(formulacion); }}><FaEdit /></button>
+                            <button className='inactive'  title='Eliminar' onClick={() => handleDeleteFormulacion(formulacion.admin_id)}><FaTrash /></button>
                         </div>
                     )}
                 </td>

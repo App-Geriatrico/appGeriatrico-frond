@@ -74,3 +74,60 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .profilee-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: unset;
+    justify-content: flex-start;
+  }
+
+  .profile-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+    align-self: center;
+  }
+
+  .button-container {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .acudiente-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .profilee-card  {
+    padding: 15px;
+  }
+ .info-card {
+    padding: 15px;
+  }
+
+
+  .profile-name,
+  .profile-id,
+  .profile-location {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .profile-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .acudiente-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+

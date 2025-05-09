@@ -246,6 +246,13 @@
       transform: translateX(0); /* Eliminar el desplazamiento */
       justify-content: center; /* Centrar el texto */
     }
+
+    .input-container input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 0.9rem;
+    }
   }
   
   /* Ajustes para dispositivos pequeños (teléfonos móviles) */
@@ -279,13 +286,18 @@
       left: 5%;
     }
   
-    button {
-      width: 90%;
+    .login-button {
+      width: 85%;
+      margin: auto;
     }
     
     .p {
       transform: translateX(0); /* Eliminar el desplazamiento */
       justify-content: center; /* Centrar el texto */
+    }
+    
+    .input-container{
+      width: 90%;
     }
   }
   

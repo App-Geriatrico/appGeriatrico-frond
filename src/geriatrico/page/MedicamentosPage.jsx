@@ -81,7 +81,6 @@ export const MedicamentosPage = () => {
 
 
     return (
-        <div className="animate__animated animate__fadeInUp">
             <div className="main-container">
                 <SideBarComponent />
                 <div className="content" style={{ backgroundColor: geriatrico?.color_principal }}>
@@ -143,7 +142,6 @@ export const MedicamentosPage = () => {
                         )}
                     </div>
                 </div>
-            </div>
 
             {/* Modal de agregar medicamento */}
             {isModalOpen && (

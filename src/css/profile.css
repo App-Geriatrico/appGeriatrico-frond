@@ -163,4 +163,8 @@ textarea[readonly] {
     border: none;
     padding: 0;
   }
+
+  .grid-4-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

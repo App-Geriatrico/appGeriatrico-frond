@@ -108,5 +108,57 @@ color: #0090bc;
     .inventory-item {
       padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .report-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .report-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      gap: 8px;
+    }
+  
+    .report-header .report-date {
+      font-size: 14px;
+      text-align: left;
+    }
+  
+    .inventory {
+      padding: 10px;
+    }
+  
+    .inventory-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 12px;
+      gap: 10px;
+    }
+  
+    .inventory-details {
+      font-size: 14px;
+    }
+  
+    .item-name {
+      font-size: 16px;
+    }
+  
+    .item-description,
+    .item-presentation,
+    .item-units-per-presentation {
+      font-size: 13px;
+    }
+  
+    .inventory-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .available-units {
+      font-size: 14px;
+    }
   }
   

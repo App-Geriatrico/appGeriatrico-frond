@@ -67,14 +67,14 @@ export const AcudientePage = () => {
                 return prev;
             });
         };
-    
+
         socket.on('acudienteRegistrado', handleSocketAcudientes);
-    
+
         return () => {
             socket.off('acudienteRegistrado', handleSocketAcudientes);
         };
     }, []);
-    
+
 
 
 
@@ -147,14 +147,14 @@ export const AcudientePage = () => {
                                 Agregar Acudiente
                             </button>
                         )}
-                        <input
-                            type="text"
-                            placeholder="Buscar por nombre o documento"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className='gestionar-input'
-                        />
                     </div>
+                    <input
+                        type="text"
+                        placeholder="Buscar por nombre o documento"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className='search-input'
+                    />
                     {loading ? (
                         <LoadingComponet />
                     ) : error ? (

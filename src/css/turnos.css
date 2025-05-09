@@ -159,3 +159,87 @@ gap: 5px;
 .report-title{
   color: white;
 }
+
+@media (max-width: 400px) {
+  .table{
+    font-size: 10px;
+  }
+  .turnos-content {
+    padding: 1rem;
+  }
+
+  .turnos-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .turnos-card {
+    padding: 1rem;
+  }
+
+  .turnos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .turnos-header .turnos-title {
+    font-size: 1rem;
+  }
+
+  .turnos-header .turnos-date {
+    font-size: 0.8rem;
+  }
+
+  .actividades-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 0.4rem;
+  }
+
+  .actividad-item {
+    padding: 0.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actividad-item .span {
+    font-size: 0.8rem;
+  }
+
+  .actividad-item .svg {
+    font-size: 1rem;
+  }
+
+  .resumen-turnos {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .resumen-turnos .horas,
+  .resumen-turnos .total-horas {
+    font-size: 0.8rem;
+  }
+
+  .turnos-container-sede {
+    padding: 10px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .btn-delete,
+  .btn-edit,
+  .btn-history {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .btn {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

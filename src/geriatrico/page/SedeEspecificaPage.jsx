@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSede } from "../../hooks";
-import { LoadingComponet, SideBarComponent } from "../../components";
+import { LoadingComponet } from "../../components";
 import '../../css/sede.css';
 import { FaCapsules, FaMedkit, FaUser, FaUserCog, FaUserNurse, FaUsers } from "react-icons/fa";
 import { SideBarLayout } from "../layout";
